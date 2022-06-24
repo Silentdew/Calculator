@@ -5,13 +5,35 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="calculator.css">
     <script src="calculator.js" defer></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+</style>
   </head>
   <body>
     <div class="calculator-grid">
       <div class="output">  <!output screen of the calculator>
-        <div class="previous-operand"></div> <!previous-operand: the values/expressions you have typed in previously>
-        <div class="current-operand"></div> <!current-operand: the values you are currently typing>
+        <div data-previous-operand class="previous-operand"></div> <!previous-operand: the values/expressions you have typed in previously>
+        <div data-current-operand class="current-operand"></div> <!current-operand: the values you are currently typing>
       </div>
+      <button data-clear class="span-two">AC</button> <!we use span-two in html to make the AC button take the space of two buttons by  using CSS >
+      <button data-delete>DEL</button>
+      <button data-operation >÷</button><!to avoid mixing up our style and classes we use data attributes to classify our buttons to code them by selecting them in javascript>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>×</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation >-</button>
+      <button data-number>.</button> <! we add data-number to the period because it acts like a number for our calculation operations>
+      <button data-number>0</button>
+      <button data-equals class="span-two">=</button>
+
     </div>
   </body>
 </html>

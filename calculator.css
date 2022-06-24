@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Dosis, sans-serif;
+  font-weight: bold;
+} /*this applies to all element*/
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat (5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: #F2D7D9;
+}
+
+.calculator-grid > button:hover {
+  background-color: #D3CEDF;
+}
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: #9CB4CC;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around; /*to push the previous-operand and current-operand closer to each other; this creates a sort of padding for on the top and bottom of the output*/
+  flex-direction: column; /*so that the previous-operand and current-operand align vertically*/
+  padding: 10px;
+  word-wrap: break-word; /*to break the line when the numbers gets too long to occupy the output space*/
+  word-break: break-all;; /*to break all line*/
+}
+
+.output .previous-operand {
+  font-size: 1.5rem;
+  color: #3C2C3E;
+}
+
+.output .current-operand {
+  font-size: 2rem;
+  color: #1B2430;
+}
